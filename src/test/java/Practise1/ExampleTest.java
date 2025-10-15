@@ -9,5 +9,6 @@ public class ExampleTest {
 	@Test
 	public void examTest() {
 		System.out.println("inside examTest method===============");
+		System.out.println("Apple===");
 	}
 }
