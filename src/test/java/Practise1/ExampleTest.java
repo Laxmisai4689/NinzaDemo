@@ -1,0 +1,13 @@
+package Practise1;
+
+import org.testng.annotations.Test;
+
+public class ExampleTest {
+
+	
+	
+	@Test
+	public void examTest() {
+		System.out.println("inside examTest method===============");
+	}
+}
