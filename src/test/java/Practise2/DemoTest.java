@@ -7,6 +7,7 @@ public class DemoTest {
 	@Test
 	public void loginTest() {
 		System.out.println("login method");
+		System.out.println("Orange banana");
 	}
 
 }
