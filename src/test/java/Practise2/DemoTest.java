@@ -6,7 +6,7 @@ public class DemoTest {
 	
 	@Test(groups = "smoke")
 	public void loginTest() {
-		System.out.println("login method");
+		
 		System.out.println("Orange banana");
 		System.out.println("Kiwi fruit");
 	}
