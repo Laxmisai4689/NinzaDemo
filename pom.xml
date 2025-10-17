@@ -1,11 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>GitHubDemo</groupId>
-  <artifactId>GitHubDemo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>GitHubDemo</groupId>
+	<artifactId>GitHubDemo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-<dependencies>
-	
+	<dependencies>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -22,5 +24,44 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.1.2</version>
 		</dependency>
-</dependencies>
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>RS</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.4</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>tregressionSuite.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+
+		</profile>
+		<profile>
+			<id>SS</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.4</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>smokeSuite.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+
+		</profile>
+	</profiles>
 </project>
