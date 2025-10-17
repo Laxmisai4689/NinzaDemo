@@ -8,6 +8,7 @@ public class DemoTest {
 	public void loginTest() {
 		System.out.println("login method");
 		System.out.println("Orange banana");
+		System.out.println("Kiwi fruit");
 	}
 
 }
